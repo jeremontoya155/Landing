@@ -7,265 +7,47 @@
     <!-- Título de la página -->
     <title>LIVING MULTIMEDIO SDE | Noticias, Información y Actualidad</title>
     
-    <!-- Meta Descripción: Breve descripción de la página para SEO -->
-    <meta name="description" content="LIVING MULTIMEDIO SDE te trae las últimas noticias, información actualizada sobre finanzas, emprendimiento, tecnología, y mucho más. Mantente informado con nuestras coberturas exclusivas y noticias relacionadas.">
+    <!-- Meta Descripción -->
+    <meta name="description" content="LIVING MULTIMEDIO SDE te trae las últimas noticias, información actualizada sobre finanzas, emprendimiento, tecnología, y mucho más.">
     
-    <!-- Meta keywords: Palabras clave que describen el contenido de la página -->
+    <!-- Meta keywords -->
     <meta name="keywords" content="noticias, finanzas, emprendimiento, tecnología, economía, última hora, actualidad, negocios, inversiones, diversidad de inversiones, noticias globales, Joseph Nicolson Friedrich, medios de comunicación, Living Multimedia SDE, cobertura noticias, información, análisis económico">
     
-    <!-- Meta robots: Para indicarle a los motores de búsqueda cómo indexar la página -->
+    <!-- Meta robots -->
     <meta name="robots" content="index, follow">
     
-    <!-- Meta author: El autor de la página -->
+    <!-- Meta author -->
     <meta name="author" content="Living Multimedia SDE">
     
-    <!-- Meta language: Idioma de la página -->
+    <!-- Meta language -->
     <meta http-equiv="content-language" content="es">
     
-    <!-- Meta OG: Etiquetas Open Graph para mejorar la previsualización en redes sociales -->
+    <!-- Meta OG -->
     <meta property="og:title" content="LIVING MULTIMEDIO SDE - Noticias, Información y Actualidad">
-    <meta property="og:description" content="Últimas noticias sobre finanzas, emprendimiento, tecnología y más. Descubre información actualizada y noticias exclusivas en Living Multimedia SDE.">
-    <meta property="og:image" content="https://www.ejemplo.com/imagen-portada.jpg"> <!-- Reemplaza con tu URL -->
+    <meta property="og:description" content="Últimas noticias sobre finanzas, emprendimiento, tecnología y más.">
+    <meta property="og:image" content="https://www.ejemplo.com/imagen-portada.jpg">
     <meta property="og:url" content="https://www.livingmultimediosde.com">
     <meta property="og:type" content="website">
     
-    <!-- Meta Twitter: Etiquetas para mejorar la previsualización en Twitter -->
+    <!-- Meta Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LIVING MULTIMEDIO SDE | Noticias, Información y Actualidad">
     <meta name="twitter:description" content="Entérate de las últimas noticias en finanzas, tecnología y más con Living Multimedia SDE.">
-    <meta name="twitter:image" content="https://www.ejemplo.com/imagen-portada.jpg"> <!-- Reemplaza con tu URL -->
+    <meta name="twitter:image" content="https://www.ejemplo.com/imagen-portada.jpg">
 
-    <!-- Meta viewport para dispositivos móviles -->
+    <!-- Meta viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Meta theme color para el color de la barra de herramientas del navegador -->
+
+    <!-- Meta theme color -->
     <meta name="theme-color" content="#ff9800">
-    <style>
-        /* Colores base para el tema oscuro */
-        :root {
-            --primary-color: #ff9800;
-            --secondary-color: #b3b3b3;
-            --background-color: #121212;
-            --text-color: #ffffff;
-            --card-color: #1f1f1f;
-            --border-color: #333;
-            --button-hover-color: #ff5722;
-        }
 
-        /* Estilos generales */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-        }
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        a {
-            text-decoration: none;
-            color: var(--primary-color);
-            transition: color 0.3s ease;
-        }
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
 
-        a:hover {
-            color: var(--button-hover-color);
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: var (--text-color);
-            padding: 20px;
-            text-align: center;
-            font-size: 2rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap; /* Flexibilidad para pantallas pequeñas */
-            justify-content: space-between;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 20px auto;
-            gap: 20px;
-        }
-
-        .main-content, .sidebar {
-            background-color: var(--card-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-        }
-
-        .main-content:hover, .sidebar:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-        }
-
-        .main-content {
-            flex: 1 1 65%; /* Tamaño de la sección principal en pantallas grandes */
-        }
-
-        .sidebar {
-            flex: 1 1 30%; /* Tamaño de la barra lateral */
-        }
-
-        .news-article img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .news-article img:hover {
-            transform: scale(1.05);
-        }
-
-        .news-article h1 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .news-article p {
-            line-height: 1.8;
-            margin-bottom: 20px;
-            color: var(--secondary-color);
-        }
-
-        .related-news {
-            list-style: none;
-            padding: 0;
-        }
-
-        .related-news li {
-            margin-bottom: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .related-news li:hover {
-            transform: translateX(10px);
-        }
-
-        .related-news a {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            text-align: center;
-            padding: 20px;
-            font-size: 1rem;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .comment-section {
-            margin-top: 30px;
-        }
-
-        .comment-section h2 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .comment-section input,
-        .comment-section textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
-            background-color: #1b1b1b;
-            color: var(--text-color);
-        }
-
-        .comment-section button {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            border: none;
-            padding: 12px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .comment-section button:hover {
-            background-color: var(--button-hover-color);
-        }
-
-        /* Anuncios dentro del flujo en pantallas pequeñas */
-        .ad-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .ad-content:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Espacios para Anuncios en pantallas grandes */
-        .sidebar a {
-            display: block;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .sidebar a img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .sidebar a:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Responsive Design: intercalar anuncios con noticias en pantallas pequeñas */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .main-content, .sidebar {
-                flex: 1 1 100%;
-                margin-bottom: 20px;
-            }
-
-            /* Intercalar noticias y anuncios en pantallas pequeñas */
-            .main-content .news-article:nth-child(2) {
-                order: 2;
-            }
-
-            .main-content .ad-content {
-                order: 1;
-                margin-bottom: 20px;
-            }
-
-            .news-article h1 {
-                font-size: 1.5rem;
-            }
-
-            .news-article p {
-                font-size: 1rem;
-            }
-        }
-    </style>
-
+    <!-- Script para comentarios -->
     <script>
         function enviarComentario() {
             var nombre = document.getElementById('nombre').value;
@@ -282,8 +64,31 @@
 </head>
 <body>
 
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Living Multimedia SDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <header>
-        LIVING MULTIMEDIO SDE
+        <h1 class="text-center my-4">LIVING MULTIMEDIO SDE</h1>
     </header>
 
     <div class="container">
@@ -291,46 +96,46 @@
 
             <!-- Anuncio intercalado (en pantallas pequeñas) -->
             <div class="ad-content">
-                <a href="https://www.anuncio1.com" target="_blank">
-                    <img src="anuncio1.jpg" alt="Anuncio 1">
+                <a href="#" target="_blank">
+                    <img src="https://via.placeholder.com/800x400" alt="Anuncio 1">
                 </a>
             </div>
 
             <!-- Noticia 1 -->
             <div class="news-article">
-                <img src="imagen-noticia1.jpg" alt="Noticia Imagen 1">
-                <h1>Título de la Noticia 1</h1>
-                <p>Esta es la primera noticia con contenido simulado. Aquí va el texto largo que describe los eventos, sucesos o información que quieres compartir. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula bibendum quam, at egestas nisi tempor at. Pellentesque sed fermentum ex, sit amet vestibulum est.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae leo vel dolor fringilla elementum non et quam. Vivamus venenatis auctor lorem sit amet facilisis. Aenean venenatis sollicitudin sapien at sollicitudin. Phasellus nec nisi vel augue lobortis fermentum. Sed nec gravida ex.</p>
+                <img src="https://via.placeholder.com/800x400" alt="Noticia Imagen 1">
+                <h1>La Inteligencia Artificial Revoluciona el Mundo de los Negocios en 2024</h1>
+                <p>La inteligencia artificial ha transformado la manera en que las empresas operan en 2024. Con la automatización de procesos y análisis de datos a gran escala, las compañías han podido optimizar sus operaciones y mejorar la toma de decisiones. Según expertos, este será solo el comienzo de una era dominada por la IA...</p>
+                <p>Las industrias de todo el mundo están aprovechando estas innovaciones para mejorar la eficiencia y reducir costos. La IA no solo automatiza tareas, sino que también proporciona análisis predictivo, lo que permite a las empresas anticiparse a las tendencias del mercado.</p>
             </div>
 
             <!-- Noticia 2 -->
             <div class="news-article">
-                <img src="imagen-noticia2.jpg" alt="Noticia Imagen 2">
-                <h1>Título de la Noticia 2</h1>
-                <p>Esta es la segunda noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula bibendum quam, at egestas nisi tempor at. Pellentesque sed fermentum ex, sit amet vestibulum est. Vivamus et nisl vitae tortor varius aliquet. Aenean volutpat mauris non ligula tincidunt, in cursus elit accumsan.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae leo vel dolor fringilla elementum non et quam. Vivamus venenatis auctor lorem sit amet facilisis. Phasellus nec nisi vel augue lobortis fermentum.</p>
+                <img src="https://via.placeholder.com/800x400" alt="Noticia Imagen 2">
+                <h1>El Auge del Comercio Electrónico: Oportunidades para los Pequeños Emprendedores</h1>
+                <p>El comercio electrónico ha visto un crecimiento sin precedentes durante el último año. Pequeños emprendedores ahora tienen más oportunidades que nunca para lanzar sus productos y servicios al mercado global, aprovechando las plataformas de venta en línea y el marketing digital para llegar a un público amplio...</p>
+                <p>El acceso a nuevas herramientas y plataformas como Shopify, Etsy, y redes sociales ha facilitado la expansión de pequeños negocios. Además, los consumidores están cada vez más inclinados a realizar compras en línea, lo que brinda a los emprendedores una oportunidad de oro.</p>
             </div>
 
             <!-- Anuncio intercalado (en pantallas pequeñas) -->
             <div class="ad-content">
-                <a href="https://www.anuncio2.com" target="_blank">
-                    <img src="anuncio2.jpg" alt="Anuncio 2">
+                <a href="#" target="_blank">
+                    <img src="https://via.placeholder.com/800x400" alt="Anuncio 2">
                 </a>
             </div>
 
             <!-- Noticia 3 -->
             <div class="news-article">
-                <img src="imagen-noticia3.jpg" alt="Noticia Imagen 3">
-                <h1>Título de la Noticia 3</h1>
-                <p>Esta es la tercera noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula bibendum quam, at egestas nisi tempor at. Pellentesque sed fermentum ex, sit amet vestibulum est. Vivamus et nisl vitae tortor varius aliquet. Aenean volutpat mauris non ligula tincidunt, in cursus elit accumsan.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae leo vel dolor fringilla elementum non et quam. Vivamus venenatis auctor lorem sit amet facilisis. Phasellus nec nisi vel augue lobortis fermentum. Sed nec gravida ex, sit amet molestie dui.</p>
+                <img src="https://via.placeholder.com/800x400" alt="Noticia Imagen 3">
+                <h1>La Economía Circular: El Futuro Sostenible de los Negocios</h1>
+                <p>El concepto de economía circular está ganando fuerza en el mundo empresarial. A medida que las compañías buscan reducir su impacto ambiental, la reutilización y el reciclaje de materiales se están convirtiendo en una estrategia clave para mantener la competitividad y cumplir con los objetivos de sostenibilidad globales...</p>
+                <p>Grandes corporaciones como Apple y Tesla están adoptando la economía circular al reutilizar materiales para sus productos y fomentar el reciclaje en sus líneas de producción. Esto no solo reduce costos a largo plazo, sino que también mejora su imagen de marca al comprometerse con el medio ambiente.</p>
             </div>
 
             <!-- Anuncio intercalado (en pantallas pequeñas) -->
             <div class="ad-content">
-                <a href="https://www.anuncio3.com" target="_blank">
-                    <img src="anuncio3.jpg" alt="Anuncio 3">
+                <a href="#" target="_blank">
+                    <img src="https://via.placeholder.com/800x400" alt="Anuncio 3">
                 </a>
             </div>
 
@@ -347,20 +152,20 @@
         <div class="sidebar">
             <h2>Noticias Relacionadas</h2>
             <ul class="related-news">
-                <li><a href="#">Noticia Relacionada 1</a></li>
-                <li><a href="#">Noticia Relacionada 2</a></li>
-                <li><a href="#">Noticia Relacionada 3</a></li>
+                <li><a href="#">Tecnologías Emergentes del 2024</a></li>
+                <li><a href="#">Economía Circular: El Futuro de los Negocios</a></li>
+                <li><a href="#">Tendencias de Inversión para el 2024</a></li>
             </ul>
 
             <!-- Anuncios en la barra lateral -->
-            <a href="https://www.anuncio1.com" target="_blank">
-                <img src="anuncio1.jpg" alt="Anuncio 1">
+            <a href="#" target="_blank">
+                <img src="https://via.placeholder.com/[300]x[250]" alt="Anuncio 1">
             </a>
-            <a href="https://www.anuncio2.com" target="_blank">
-                <img src="anuncio2.jpg" alt="Anuncio 2">
+            <a href="#" target="_blank">
+                <img src="https://via.placeholder.com/300x250" alt="Anuncio 2">
             </a>
-            <a href="https://www.anuncio3.com" target="_blank">
-                <img src="anuncio3.jpg" alt="Anuncio 3">
+            <a href="#" target="_blank">
+                <img src="https://via.placeholder.com/300x250" alt="Anuncio 3">
             </a>
         </div>
     </div>
@@ -369,5 +174,7 @@
         Copyright © Todos los derechos reservados
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

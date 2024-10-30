@@ -1,0 +1,224 @@
+
+/* Colores base para el tema oscuro */
+:root {
+    --primary-color: #ff9800;
+    --secondary-color: #b3b3b3;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --card-color: #1f1f1f;
+    --border-color: #333;
+    --button-hover-color: #ff5722;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--button-hover-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var (--text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Flexibilidad para pantallas pequeñas */
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.main-content, .sidebar {
+    background-color: var(--card-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.main-content:hover, .sidebar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.main-content {
+    flex: 1 1 65%; /* Tamaño de la sección principal en pantallas grandes */
+}
+
+.sidebar {
+    flex: 1 1 30%; /* Tamaño de la barra lateral */
+}
+
+.news-article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.news-article img:hover {
+    transform: scale(1.05);
+}
+
+.news-article h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.news-article p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.related-news {
+    list-style: none;
+    padding: 0;
+}
+
+.related-news li {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.related-news li:hover {
+    transform: translateX(10px);
+}
+
+.related-news a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.comment-section {
+    margin-top: 30px;
+}
+
+.comment-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #1b1b1b;
+    color: var(--text-color);
+}
+
+.comment-section button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.comment-section button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Anuncios dentro del flujo en pantallas pequeñas */
+.ad-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.ad-content:hover img {
+    transform: scale(1.05);
+}
+
+/* Espacios para Anuncios en pantallas grandes */
+.sidebar a {
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.sidebar a img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar a:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Design: intercalar anuncios con noticias en pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content, .sidebar {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Intercalar noticias y anuncios en pantallas pequeñas */
+    .main-content .news-article:nth-child(2) {
+        order: 2;
+    }
+
+    .main-content .ad-content {
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .news-article h1 {
+        font-size: 1.5rem;
+    }
+
+    .news-article p {
+        font-size: 1rem;
+    }
+}
